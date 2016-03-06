@@ -1,7 +1,7 @@
 # cordovaEsptouch
 a cordova plugin for Esptouch which smartconfig esp8266
 # Install
-cordova plugin add https://github.com/xumingxin7398/cordovaEsptouch.git
+cordova plugin add https://github.com/lianghuiyuan/cordovaEsptouch.git
 
 # usage
 1.esptouchPlugin.smartConfig 
