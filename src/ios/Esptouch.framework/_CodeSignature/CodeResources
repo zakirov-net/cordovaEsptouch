@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		VIPr2CM361X/IZclh+jCOzhjzEw=
-		</data>
 		<key>Headers/ESPDataCode.h</key>
 		<data>
 		uvIQZxuR7gqp/QCkTwxrqoDk1kI=
@@ -62,7 +58,7 @@
 		</data>
 		<key>Headers/Esptouch.h</key>
 		<data>
-		n0xVq/Sz1MvTamDwU8xnBffmfKk=
+		3nBuenHK12EY29amdiWz/ROHtHY=
 		</data>
 		<key>Headers/IPAddress.h</key>
 		<data>
@@ -70,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Rx9gHlhbdLzkWjWpxzCXFcTRY1s=
+		m5vmxs3BK2Fm7+bW/2gDgCZ9MPY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -133,7 +129,7 @@
 		</data>
 		<key>Headers/Esptouch.h</key>
 		<data>
-		n0xVq/Sz1MvTamDwU8xnBffmfKk=
+		3nBuenHK12EY29amdiWz/ROHtHY=
 		</data>
 		<key>Headers/IPAddress.h</key>
 		<data>
