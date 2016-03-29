@@ -33,7 +33,7 @@
     if([isSsidHiddenStr compare:@"NO"]==NSOrderedSame){
         isSsidHidden=false;
     }
-    int taskCount = (int)[command.arguments objectAtIndex:4];
+    int taskCount = (int)[[command.arguments objectAtIndex:4] intValue];
     self._esptouchTask =
     [[ESPTouchTask alloc]initWithApSsid:apSsid andApBssid:apBssid andApPwd:apPwd andIsSsidHiden:isSsidHidden];
     EspTouchDelegateImpl *esptouchDelegate=[[EspTouchDelegateImpl alloc]init];
@@ -46,9 +46,10 @@
     dispatch_queue_t  queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         // show the result to the user in UI Main Thread
-        dispatch_async(dispatch_get_main_queue(), ^{
-
-            
+        NSString *daStr = @"imlink";
+        const char *queueName = [daStr UTF8String];
+        dispatch_queue_t myQueue = dispatch_queue_create(queueName, DISPATCH_QUEUE_CONCURRENT);
+        dispatch_async(myQueue, ^{
             ESPTouchResult *firstResult = [esptouchResultArray objectAtIndex:0];
             // check whether the task is cancelled and no results received
             if (!firstResult.isCancelled)
@@ -60,7 +61,6 @@
                 //const int maxDisplayCount = 5;
                 if ([firstResult isSuc])
                 {
-                    
 //                    for (int i = 0; i < [esptouchResultArray count]; ++i)
 //                    {
 //                        ESPTouchResult *resultInArray = [esptouchResultArray objectAtIndex:i];
