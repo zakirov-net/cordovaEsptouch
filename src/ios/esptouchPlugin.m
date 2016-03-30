@@ -53,11 +53,11 @@
             // check whether the task is cancelled and no results received
             if (!firstResult.isCancelled)
             {
-                //NSMutableString *mutableStr = [[NSMutableString alloc]init];
-                //NSUInteger count = 0;
+                NSMutableString *mutableStr = [[NSMutableString alloc]init];
+                NSUInteger count = 0;
                 // max results to be displayed, if it is more than maxDisplayCount,
                 // just show the count of redundant ones
-                //const int maxDisplayCount = 5;
+                const int maxDisplayCount = 5;
                 if ([firstResult isSuc])
                 {
                     for (int i = 0; i < [esptouchResultArray count]; ++i)
