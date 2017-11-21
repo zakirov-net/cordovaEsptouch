@@ -70,9 +70,9 @@ public class esptouchPlugin extends CordovaPlugin {
                             	// sb.append("\nthere's " + (resultList.size() - count)
                             			// + " more resultList(s) without showing\n");
                             // }
-                            PluginResult result = new PluginResult(PluginResult.Status.OK, "finished");
-                            result.setKeepCallback(true);           // keep callback after this call
-                            receivingCallbackContext.sendPluginResult(result);
+                            //PluginResult result = new PluginResult(PluginResult.Status.OK, "finished");
+                            //result.setKeepCallback(true);           // keep callback after this call
+                            //receivingCallbackContext.sendPluginResult(result);
                             //receivingCallbackContext.success("finished");
                         } else {
                             PluginResult result = new PluginResult(PluginResult.Status.ERROR, "Esptouch fail");
@@ -102,10 +102,10 @@ public class esptouchPlugin extends CordovaPlugin {
     private IEsptouchListener myListener = new IEsptouchListener() {
         @Override
         public void onEsptouchResultAdded(final IEsptouchResult result) {
-            String text = "bssid="+ result.getBssid()+",InetAddress="+result.getInetAddress().getHostAddress();
+            String text = "data:0,count:1,bssid: "+ result.getBssid()+",InetAddress="+result.getInetAddress().getHostAddress();
             PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, text);
             pluginResult.setKeepCallback(true);           // keep callback after this call
-            //receivingCallbackContext.sendPluginResult(pluginResult);    //modified by lianghuiyuan
+            receivingCallbackContext.sendPluginResult(pluginResult);    //modified by lianghuiyuan
         }
     };
 
