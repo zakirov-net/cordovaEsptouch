@@ -76,7 +76,9 @@
                         [mutableStr appendString:[NSString stringWithFormat:@"\nthere's %lu more result(s) without showing\n",(unsigned long)([esptouchResultArray count] - count)]];
                     }
                     CDVPluginResult* pluginResult = nil;
-                    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: @"finished"];
+                    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:
+                        mutableStr];
+                        //@"finished"];
                     [pluginResult setKeepCallbackAsBool:true];
                     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
                 }
